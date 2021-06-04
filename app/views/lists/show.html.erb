@@ -1,13 +1,19 @@
-<h1>List</h1>
+<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://source.unsplash.com/random)">
+  <h1>List</h1>
+</div>
 
-<div>
-  <% @bookmarks.each do |bookmark| %>
-    <p><%= bookmark.movie.title %></p>
-    <p><%= bookmark.comment %></p>
-    <%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure?'}%>
-  <% end %>
+<div class="card-product">
+  <img src="https://source.unsplash.com/random">
+  <div class="card-product-infos">
+    <% @bookmarks.each do |bookmark| %>
+      <p><%= bookmark.movie.title %></p>
+      <p><%= bookmark.movie.overview %></p>
+      <p><%= bookmark.comment %></p>
+      <%= link_to 'Delete bookmark', bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure?'}%>
+    <% end %>
+  </div>
 </div>
 
 
-<%= link_to 'Add bookmark', new_list_bookmark_path(@list.id) %>
-<%= link_to 'Back', lists_path %>
+<p><%= link_to 'Add bookmark', new_list_bookmark_path(@list.id) %></p>
+<p><%= link_to 'Back', lists_path %></p>
