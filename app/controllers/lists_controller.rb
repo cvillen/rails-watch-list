@@ -21,6 +21,10 @@ class ListsController < ApplicationController
     end
   end
 
+  def edit
+    @list = List.find(params[:id])
+  end
+
   private
 
   def list_params

@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: cvillen
+  api_key: '877835815546698'
+  api_secret: 7BcfivJ9uCZ545Vz-XgnGbnM_r8
+  enhance_image_tag: true
+  static_file_support: false
+production:
+  cloud_name: cvillen
+  api_key: '877835815546698'
+  api_secret: 7BcfivJ9uCZ545Vz-XgnGbnM_r8
+  enhance_image_tag: true
+  static_file_support: true
+test:
+  cloud_name: cvillen
+  api_key: '877835815546698'
+  api_secret: 7BcfivJ9uCZ545Vz-XgnGbnM_r8
+  enhance_image_tag: true
+  static_file_support: false

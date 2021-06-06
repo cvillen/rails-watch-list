@@ -1,14 +1,17 @@
-<div class="container">
-  <h1>Lists</h1>
-  <%= cl_image_tag("cpj1kgvomk9a7o7ugyhn",
-        width: 400, height: 300, crop: :fill) %>
-  <div>
-    <% @lists.each do |list| %>
-      <ul>
-        <li><%= list.name %>  <%= link_to 'Show', list %></li>
-      </ul>
-    <% end %>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(banner.jpg);">
+  <div class="container">
+    <h1>Movie lists</h1>
   </div>
-
-  <%= link_to 'Add new list', new_list_path %>
 </div>
+
+
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <% @lists.each do |list| %>
+      <h5 class="card-title"><%= list.name %></h5>
+      <a href="#" class="card-link">Show</a>
+    <% end -%>
+  </div>
+</div>
+
+<%= link_to 'Add new list', new_list_path %>
