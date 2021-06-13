@@ -1,17 +1,22 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(banner.jpg);">
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0)), url(https://res.cloudinary.com/cvillen/image/upload/v1623600454/banner_ygjon1.jpg);">
   <div class="container">
     <h1>Movie lists</h1>
   </div>
 </div>
 
 
-<div class="card" style="width: 18rem;">
-  <div class="card-body">
-    <% @lists.each do |list| %>
-      <h5 class="card-title"><%= list.name %></h5>
-      <a href="#" class="card-link">Show</a>
-    <% end -%>
-  </div>
-</div>
+ <% @lists.each do |list| %>
+                <h5 class="card-title"><%= list.name %></h5>
+              <% end -%>
+
+
+<!-- <div class="my-5">
+    <h2 class="mb-5">Main lists</h2>
+      <div class="d-flex">
+        <div class="container">
+          <div class="row row-cols-5">
+            <div class="card-list"> -->
+
+
 
 <%= link_to 'Add new list', new_list_path %>
