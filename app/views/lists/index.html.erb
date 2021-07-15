@@ -7,7 +7,10 @@
 
 <div class="cards-category">
   <% @lists.each do |list| %>
-    <h5><%= link_to list.name, list_path(list) %></h5>
+    <div class="card-white">
+      <h5><%= link_to list.name, list_path(list) %></h5>
+
+    </div>
   <%end -%>
 </div>
 
