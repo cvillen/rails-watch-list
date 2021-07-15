@@ -4,20 +4,14 @@
   </div>
 </div>
 
-<div class="my-5">
-  <div class="d-flex">
-    <div class="container">
-      <div class="row row-cols-4 ">
-        <% @lists.each do |list| %>
-          <h5><%= link_to list.name, list_path(list) %></h5>
-        <%end -%>
-      </div>
-    </div>
-  </div>
+
+<div class="cards-category">
+  <% @lists.each do |list| %>
+    <h5><%= link_to list.name, list_path(list) %></h5>
+  <%end -%>
 </div>
 
-
-
-
-<%= link_to 'Add new list', new_list_path %>
+<div class="btn btn-success">
+  <%= link_to 'Add new list', new_list_path %>
+</div>
 

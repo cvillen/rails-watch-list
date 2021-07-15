@@ -2,24 +2,17 @@
   <h1><%= @list.name %></h1>
 </div>
 
-<div class="card-movie">
-  <img src="xxxxxxxxxxxxxxxxx" />
-  <div class="card-movie-infos">
-    <div>
-        <% @bookmarks.each do |bookmark| %>
-          <h2><%= bookmark.movie.title %></h2>
-          <p><%= bookmark.movie.overview %></p>
-          <p><%= bookmark.comment %></p>
-          <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure?'}%>
-        <% end %>
-    </div>
-  </div>
-    <div>
-      <h2 class="card-movie-rating"></h2>
-      <img src=""/>
-  </div>
+<div>
+  <% @bookmarks.each do |bookmark| %>
+    <h2><%= bookmark.movie.title %></h2>
+    <p><%= bookmark.movie.overview %></p>
+    <p><%= bookmark.comment %></p>
+    <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure?'}%>
+  <% end %>
 </div>
 
-<p><%= link_to 'Add bookmark', new_list_bookmark_path(@list.id) %></p>
-<p><%= link_to 'Delete list', list_path(@list), method: :delete, data: {confirm: 'Are you sure?'} %></p>
-<p><%= link_to 'Back', lists_path %></p>
+<div>
+  <p class="btn btn-success"><%= link_to 'Add bookmark', new_list_bookmark_path(@list.id) %></p>
+  <p class="btn btn-danger"><%= link_to 'Delete list', list_path(@list), method: :delete, data: {confirm: 'Are you sure?'} %></p>
+  <p class="btn btn-primary"><%= link_to 'Back', lists_path %></p>
+</div>
