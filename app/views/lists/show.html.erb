@@ -2,16 +2,16 @@
   <h1><%= @list.name %></h1>
 </div>
 
-<div class="card-movie">
-
+<div class="card-movie m-4">
   <% @bookmarks.each do |bookmark| %>
   <div>
     <%= image_tag bookmark.movie.poster_url %>
     <div class="card-movie-info">
       <h2><%= bookmark.movie.title %></h2>
+      <p><%= bookmark.movie.rating %> <i class="fas fa-star star-yellow"></i></p>
       <p><%= bookmark.movie.overview %></p>
-      <p><%= bookmark.comment %></p>
-      <p><%= bookmark.movie.rating %></p>
+      <p> <i class="fas fa-quote-left"></i> <%= bookmark.comment %> </p>
+
       <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure?'}%>
     </div>
   </div>
