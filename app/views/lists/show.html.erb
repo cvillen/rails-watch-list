@@ -3,7 +3,9 @@
 </div>
 
 <div class="card-movie">
+
   <% @bookmarks.each do |bookmark| %>
+  <div>
     <%= image_tag bookmark.movie.poster_url %>
     <div class="card-movie-info">
       <h2><%= bookmark.movie.title %></h2>
@@ -12,6 +14,7 @@
       <p><%= bookmark.movie.rating %></p>
       <%= link_to 'Delete', bookmark_path(bookmark), method: :delete, data: {confirm: 'Are you sure?'}%>
     </div>
+  </div>
   <% end %>
 </div>
 

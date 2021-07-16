@@ -8,6 +8,7 @@
 <div class="cards-category">
   <% @lists.each do |list| %>
     <div class="card-white">
+      <%= image_tag %>
       <h5><%= link_to list.name, list_path(list) %></h5>
 
     </div>
